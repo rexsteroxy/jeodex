@@ -145,7 +145,7 @@
    <!-- Add loader-wrapper just below the body tag -->
 <div id="loader-wrapper">
   <div id="loader">
-    <h1 style="color:white">Johdex Logistics Services</h1>
+  
   </div>
   <div class="loader-section section-left"></div>
   <div class="loader-section section-right"></div>
