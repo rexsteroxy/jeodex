@@ -21,3 +21,7 @@ Route::get('/ecommerce', 'PageController@ecommerce');
 Route::get('/login', 'PageController@login');
 Route::get('/contact', 'PageController@contact');
 
+Route::get('/admin', 'AdminController@index');
+Route::get('/upload', 'AdminController@upload');
+
+
