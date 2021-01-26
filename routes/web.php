@@ -18,6 +18,10 @@ Route::get('/', 'PageController@index');
 Route::get('/about', 'PageController@about');
 Route::get('/domestic', 'PageController@domestic');
 Route::get('/ecommerce', 'PageController@ecommerce');
+Route::get('/register', 'PageController@register');
 Route::get('/login', 'PageController@login');
 Route::get('/contact', 'PageController@contact');
-
+Route::get('/admin', 'AdminController@index');
+Route::get('/signup', 'AdminController@signUp');
+Route::get('/signin', 'AdminController@signIn');
+Route::get('/upload', 'AdminController@upload');
