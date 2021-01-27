@@ -1,5 +1,3 @@
-@extends('layouts.admin')
-@section('content')
 <h3>Register Admin</h3>
 <form action="/register" method="POST">
   {{ csrf_field()}}
@@ -22,4 +20,3 @@
    
     <button type="submit" class="btn btn-primary">Register</button>
   </form>
-@endsection
