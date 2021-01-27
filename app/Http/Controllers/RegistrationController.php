@@ -5,9 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
-use App\User;
+use App\Models\User;
 
-class AdminController extends Controller
+class RegistrationController extends Controller
 {
     public function create() 
     {
@@ -24,7 +24,7 @@ class AdminController extends Controller
             'password'=> 'required|confirmed'
         ]);
 
-        //Create and save the user
+        //Create and save the admin
 
         $user = User::create([
             'name' => request('name'), 
@@ -33,15 +33,11 @@ class AdminController extends Controller
             ]);
         
        
+        //Sign them in
+        Auth::login($user);
 
-        //Redirect to the home the page
-        return redirect('admin.index');
-    }
-
-
-    public function index() 
-    {
-        return view('admin.index');
+        //Redirect to the admin the page
+        return redirect('admin');
     }
 
     
