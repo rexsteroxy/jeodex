@@ -39,10 +39,10 @@ class PackageController extends Controller
             $package->tracking_id = $request->input('tracking_id');
             $package->sender_name = $request->input('sender_name');
             $package->sender_location = $request->input('sender_location');
-            $package->reciever_name = $request->input('reciever_name');
-            $package->reciever_email = $request->input('reciever_email');
-            $package->reciever_phonenumber = $request->input('reciever_phonenumber');
-            $package->reciever_address = $request->input('reciever_address');
+            $package->receiver_name = $request->input('receiver_name');
+            $package->receiver_email = $request->input('receiver_email');
+            $package->receiver_phonenumber = $request->input('receiver_phonenumber');
+            $package->receiver_address = $request->input('receiver_address');
             $package->destination = $request->input('destination');
             $package->delivery_date = $request->input('delivery_date');
             $package->description = $request->input('description');

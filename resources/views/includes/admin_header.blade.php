@@ -70,7 +70,7 @@
         <ul class="nav pull-right top-menu">
 
           <li class="active">
-            <a class="" href="{{('/admin/package_upload')}}">
+            <a class="" href="{{('/package_upload')}}">
               <i class="icon_house_alt"></i>
               <span>Package</span>
             </a>

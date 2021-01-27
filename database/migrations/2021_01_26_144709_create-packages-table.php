@@ -15,7 +15,6 @@ class CreatePackagesTable extends Migration
     {
         Schema::create('packages', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id');
             $table->string('tracking_id')->unique();
             $table->string('sender_name');
             $table->string('sender_location');

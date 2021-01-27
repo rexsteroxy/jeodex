@@ -1034,6 +1034,15 @@ ul.sidebar-menu li.active a i {
 
 }
 
+.panel-body {
+    border: 0 none !important;
+}
+
+.panel-heading,
+.panel-body {
+    padding-left: 0;
+}
+
 .wrapper {
 
     display: inline-block;
@@ -2131,6 +2140,8 @@ div[data-role="editor-toolbar"] {
   box-shadow: none;
 
   margin-bottom: 30px;
+  
+  margin-top: 7rem;
 
 }
 
