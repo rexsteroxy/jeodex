@@ -21,10 +21,10 @@ class CreatePackagesTable extends Migration
             $table->string('receiver_name');
             $table->string('receiver_email');
             $table->string('receiver_phonenumber');
-            $table->text('receiver_address');
+            $table->string('receiver_address');
             $table->string('destination');
             $table->string('delivery_date');
-            $table->text('description');
+            $table->string('description');
             $table->string('weight');
             $table->string('cost');
             $table->timestamps();

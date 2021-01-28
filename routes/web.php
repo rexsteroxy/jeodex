@@ -21,21 +21,27 @@ Route::get('/ecommerce', 'PageController@ecommerce');
 //Route::get('/login', 'PageController@login');
 Route::get('/contact', 'PageController@contact');
 
+
 // Creating Routes for the Admin pages
     Route::middleware('auth')->group( function() {
     Route::get('/register', 'RegistrationController@create');
     Route::post('/register', 'RegistrationController@store');
-
     Route::get('/logout', 'SessionsController@destroy');
 
     Route::get('/admin', 'AdminController@index')->name('admin');
+
+    Route::get('/packages', 'PackageController@index');
     Route::get('/package_upload', 'PackageController@uploadPackage');
     Route::post('/add_package', 'PackageController@addPackage');
+    Route::get('/edit/{package_id}', 'PackageController@edit');
+    Route::post('/update/{package_id}', 'PackageController@update');
     Route::get('/view/{package_id}', 'PackageController@show');
+    
 });
 
 Route::get('/login', 'SessionsController@create')->name('login');
 Route::post('/login', 'SessionsController@store');
+
 
 
 
