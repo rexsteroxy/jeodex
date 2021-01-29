@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Package;
+use App\Mail\NotificationMail;
 
 class PackageController extends Controller
 {
@@ -59,6 +60,10 @@ class PackageController extends Controller
             $package->weight = $request->input('weight');
             $package->cost = $request->input('cost');
             $package->save();
+
+            // Send email to admin user
+            $data = $request->all();
+             \Mail::to($data['receiver_email'])->send(new NotificationMail($data));
 
            return redirect('/admin')->with('success','Package Uploaded Successfully');
     }
