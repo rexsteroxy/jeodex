@@ -6,12 +6,12 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 use App\Models\Package;
 use App\Mail\NotificationMail;
 
 class PackageController extends Controller
 {
-
     // Returning all the available packages in the database
     public function index()
     {
@@ -26,11 +26,14 @@ class PackageController extends Controller
         return view('packages.upload');
     }
 
+    // Defining the variable $tracking_id
+    //var $tracking_id;
+
     //Adding or Uploading  Packages 
     public function addPackage(Request $request)
     {
         $this->validate($request, [
-            "tracking_id"=>'required',
+            //"tracking_id"=>'required',
             "sender_name"=>'required',
             "sender_location"=>'required',
             "receiver_name"=>'required',
@@ -44,10 +47,21 @@ class PackageController extends Controller
             "cost"=>'required'
            
         ]);
-            
+
+
+        // For Generating Unique Tracking_id for the uploads
+
+        $chars = '0123456789qwertyasdfghmnbvcxzlkjpoiu';
+        $chars_length = strlen($chars);
+        $track_code = 'johdex';
+        for($i = 0; $i < 11; $i++) {
+            $track_code.= $chars[mt_rand(0, $chars_length-1)];
+        }
+        $track_code;
+
             $package = new Package;
         
-            $package->tracking_id = $request->input('tracking_id');
+            //$package->tracking_id = generate_track_id(11);
             $package->sender_name = $request->input('sender_name');
             $package->sender_location = $request->input('sender_location');
             $package->receiver_name = $request->input('receiver_name');
@@ -59,13 +73,16 @@ class PackageController extends Controller
             $package->description = $request->input('description');
             $package->weight = $request->input('weight');
             $package->cost = $request->input('cost');
+            // Calling the generate track id function
+            $tracking_id = $track_code;
+            $package->tracking_id = $tracking_id;
             $package->save();
 
             // Send email to admin user
             $data = $request->all();
-             \Mail::to($data['receiver_email'])->send(new NotificationMail($data));
+            \Mail::to($data['receiver_email'])->send(new NotificationMail($data));
 
-           return redirect('/admin')->with('success','Package Uploaded Successfully');
+           return redirect('/packages')->with('success','Package Uploaded Successfully');
     }
 
     // Returning Packages with its initial values
@@ -78,7 +95,7 @@ class PackageController extends Controller
     public function update(Request $request, $package_id)
     {
         $this->validate($request, [
-            "tracking_id"=>'required',
+            //"tracking_id"=>'required',
             "sender_name"=>'required',
             "sender_location"=>'required',
             "receiver_name"=>'required',
@@ -95,7 +112,7 @@ class PackageController extends Controller
             
             $package = Package::find($package_id);
 
-            $package->tracking_id = $request->input('tracking_id');
+            //$package->tracking_id = $request->input('tracking_id');
             $package->sender_name = $request->input('sender_name');
             $package->sender_location = $request->input('sender_location');
             $package->receiver_name = $request->input('receiver_name');
@@ -107,10 +124,11 @@ class PackageController extends Controller
             $package->description = $request->input('description');
             $package->weight = $request->input('weight');
             $package->cost = $request->input('cost');
+            //$package->tracking_id = $tracking_id;
 
 
             $data = array(
-            "tracking_id"=>$package->tracking_id,
+            //"tracking_id"=>$package->tracking_id,
             "sender_name"=>$package->sender_name,
             "sender_location"=>$package->sender_location,
             "receiver_name"=>$package->receiver_name,
@@ -121,13 +139,14 @@ class PackageController extends Controller
             "delivery_date"=>$package->delivery_date,
             "description"=>$package->description,
             "weight"=>$package->weight,
-            "cost"=>$package->cost
+            "cost"=>$package->cost,
+            //"tracking_id"=>$package->tracking_id
             );
 
             Package::where('id',$package_id)->update($data);
             $package->update();
 
-           return redirect('/admin')->with('success','Package Updated Successfully');
+           return redirect('/packages')->with('success','Package Updated Successfully');
 
            return $package_id;
         
@@ -143,8 +162,26 @@ class PackageController extends Controller
     // Deleting Packages
     public function delete($package_id){
         Package::where('id',$package_id)->delete();
-        return redirect('/admin')->with('success','Package Deleted  Successfully');
+        return redirect('/packages')->with('success','Package Deleted  Successfully');
     
+    }
+
+    public function getPackage(Request $request)
+    {
+        $this->validate($request, [
+           "track_id"=>'required'
+        ]);
+
+        $code = 'johdex';
+    
+        $id = $request->input('track_id');
+        if(strpos($id, $code)!== false) {
+            $packages = Package::where('tracking_id', '=', $id)->get();
+            return view('packageView',compact('packages'));
+        } else {
+            return redirect('/')->with('error','Invalid Track Code');
+        }
+       
     }
 
 

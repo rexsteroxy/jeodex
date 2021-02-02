@@ -6,7 +6,6 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
-//use App\Models\User;
 use App\Models\Package;
 
 class NotificationMail extends Mailable
@@ -22,7 +21,7 @@ class NotificationMail extends Mailable
      */
     public function __construct($data)
     {
-            $this->tracking_id =$data['tracking_id'];
+            //$this->tracking_id =$data['tracking_id'];
             $this->receiver_name =$data['receiver_name'];
             $this->receiver_email =$data['receiver_email'];
             $this->destination =$data['destination'];
@@ -35,6 +34,6 @@ class NotificationMail extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.notification')->with('tracking_id',$this->tracking_id)->with('receiver_name',$this->receiver_name)->with('receiver_email',$this->receiver_email)->with('destination',$this->destination);
+        return $this->markdown('emails.notification')->with('receiver_name',$this->receiver_name)->with('receiver_email',$this->receiver_email)->with('destination',$this->destination);
     }
 }

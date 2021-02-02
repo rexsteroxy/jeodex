@@ -20,6 +20,7 @@
                 <th>Receiver</th>
                 <th>Receiver Email</th>
                 <th></th>
+                <th></th>
               </tr>
             </thead>
 
@@ -31,6 +32,7 @@
                 <td>{{$package->receiver_name}}</td>
                 <td>{{$package->receiver_email}}</td>
                 <td><a href="{{ url("/view/{$package->id}") }}"><span class="btn btn-primary">View</span></a></td>
+                <td><a href="{{ url("/delete/{$package->id}") }}"><span class="btn btn-primary">Delete</span></a></td>
               </tr>
             </tbody>
 
@@ -41,27 +43,5 @@
       </div>
 
     </div>
-
-
-
-<!----------------------------------------------------------------
-
-($packages as $package)
-<div class="well">
-    <div class="row">
-        <div class="col-md-8 col-sm-8">
-            <h3><a href="/{{$package->id}}">{{$package->receiver_name}}</a></h3>
-
-            <p class="blog-post-meta">{{$package->receiver_name}}</p>
-        
-            <p>{{$package->description}}</p>
-        </div>
-    </div>
-   
-   
-</div>
-
----->
-
 
 @endsection

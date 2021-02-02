@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "56abc574c9c50fc6e4b7f5ef2a76cd50",
+    "content-hash": "d4568cf6b4261e839cbbf051cfc281d9",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2221,6 +2221,65 @@
             "time": "2020-08-18T17:17:46+00:00"
         },
         {
+            "name": "sendinblue/api-v3-sdk",
+            "version": "v7.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sendinblue/APIv3-php-library.git",
+                "reference": "0b86513957d22c3fcd0598f5c961be2513f6c8d6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sendinblue/APIv3-php-library/zipball/0b86513957d22c3fcd0598f5c961be2513f6c8d6",
+                "reference": "0b86513957d22c3fcd0598f5c961be2513f6c8d6",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "ext-mbstring": "*",
+                "guzzlehttp/guzzle": "^6.2 || ^7.0",
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "~1.12",
+                "phpunit/phpunit": "^4.8",
+                "squizlabs/php_codesniffer": "~2.6"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "7.x.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "SendinBlue\\Client\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "SendinBlue Developers",
+                    "email": "contact@sendinblue.com",
+                    "homepage": "https://www.sendinblue.com/"
+                }
+            ],
+            "description": "Official SendinBlue provided RESTFul API V3 php library",
+            "homepage": "https://github.com/sendinblue/APIv3-php-library",
+            "keywords": [
+                "api",
+                "php",
+                "sdk",
+                "sendinblue",
+                "swagger"
+            ],
+            "time": "2021-01-22T07:13:16+00:00"
+        },
+        {
             "name": "swiftmailer/swiftmailer",
             "version": "v6.2.4",
             "source": {
@@ -4429,6 +4488,66 @@
             "time": "2020-07-13T06:12:54+00:00"
         },
         {
+            "name": "vansteen/laravel-sendinblue",
+            "version": "v1.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/vansteen/laravel-sendinblue.git",
+                "reference": "daa03abe5d4525a2b8f89d46f58269ba331d5eaf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/vansteen/laravel-sendinblue/zipball/daa03abe5d4525a2b8f89d46f58269ba331d5eaf",
+                "reference": "daa03abe5d4525a2b8f89d46f58269ba331d5eaf",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "~5|^6.0|^7.0|^8.0",
+                "sendinblue/api-v3-sdk": "^6.1|^7.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.16",
+                "orchestra/testbench": "~3.0|^4.0|^5.0",
+                "php-coveralls/php-coveralls": "^2.2",
+                "phpunit/phpunit": "~5.7|^8.0|^9.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Vansteen\\Sendinblue\\SendinblueServiceProvider"
+                    ],
+                    "aliases": {
+                        "Sendinblue": "Vansteen\\Sendinblue\\Facades\\Sendinblue"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Vansteen\\Sendinblue\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Thomas Van Steenwinckel",
+                    "email": "code@1234.pm",
+                    "homepage": "https://github.com/vansteen",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A Laravel 5/6/7/8 service provider, facade and config file for the SendinBlue's API v3 official PHP library.",
+            "homepage": "https://github.com/vansteen/laravel-sendinblue",
+            "keywords": [
+                "laravel",
+                "sendinblue"
+            ],
+            "time": "2020-10-01T13:12:54+00:00"
+        },
+        {
             "name": "vlucas/phpdotenv",
             "version": "v5.2.0",
             "source": {
@@ -4579,12 +4698,12 @@
             "version": "1.9.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/webmozart/assert.git",
+                "url": "https://github.com/webmozarts/assert.git",
                 "reference": "bafc69caeb4d49c39fd0779086c03a3738cbb389"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/assert/zipball/bafc69caeb4d49c39fd0779086c03a3738cbb389",
+                "url": "https://api.github.com/repos/webmozarts/assert/zipball/bafc69caeb4d49c39fd0779086c03a3738cbb389",
                 "reference": "bafc69caeb4d49c39fd0779086c03a3738cbb389",
                 "shasum": ""
             },

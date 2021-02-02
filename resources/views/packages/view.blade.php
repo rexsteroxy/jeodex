@@ -26,108 +26,72 @@
           <tr>
             <td>Sender Location</td>
             <td>{{$package->sender_location}}</td>
-            <td>
-                <a href="{{ ("/edit/{$package->id}") }}"><span class="badge bg-info">Edit</span>
-            </td>
             
           </tr>
 
           <tr>
             <td>Sender Name</td>
             <td>{{$package->sender_name}}</td>
-            <td>
-                <a href="{{ ("/edit/{$package->id}") }}"><span class="badge bg-info">Edit</span>
-            </td>
             
           </tr>
 
           <tr>
             <td>Sender Location</td>
             <td>{{$package->sender_location}}</td>
-            <td>
-                <a href="{{ ("/edit/{$package->id}") }}"><span class="badge bg-info">Edit</span>
-            </td>
             
           </tr>
 
           <tr>
             <td>Receiver Name</td>
             <td>{{$package->receiver_name}}</td>
-            <td>
-                <a href="{{ ("/edit/{$package->id}") }}"><span class="badge bg-info">Edit</span>
-            </td>
             
           </tr>
 
           <tr>
             <td>Receiver Email</td>
             <td>{{$package->receiver_email}}</td>
-            <td>
-                <a href="{{ ("/edit/{$package->id}") }}"><span class="badge bg-info">Edit</span>
-            </td>
             
           </tr>
 
           <tr>
             <td>Receiver Phonenumber</td>
             <td>{{$package->receiver_phonenumber}}</td>
-            <td>
-                <a href="{{ ("/edit/{$package->id}") }}"><span class="badge bg-info">Edit</span>
-            </td>
             
           </tr>
 
           <tr>
             <td>Receiver Address</td>
             <td>{{$package->receiver_address}}</td>
-            <td>
-                <a href="{{ ("/edit/{$package->id}") }}"><span class="badge bg-info">Edit</span>
-            </td>
             
           </tr>
 
           <tr>
             <td>Destination</td>
             <td>{{$package->destination}}</td>
-            <td>
-                <a href="{{ ("/edit/{$package->id}") }}"><span class="badge bg-info">Edit</span>
-            </td>
             
           </tr>
 
           <tr>
             <td>Delivery Date</td>
             <td>{{$package->delivery_date}}</td>
-            <td>
-                <a href="{{ ("/edit/{$package->id}") }}"><span class="badge bg-info">Edit</span>
-            </td>
             
           </tr>
 
           <tr>
             <td>Package Description</td>
             <td>{{$package->description}}</td>
-            <td>
-                <a href="{{ ("/edit/{$package->id}") }}"><span class="badge bg-info">Edit</span>
-            </td>
             
           </tr>
 
           <tr>
             <td>Weight</td>
             <td>{{$package->weight}}</td>
-            <td>
-                <a href="{{ ("/edit/{$package->id}") }}"><span class="badge bg-info">Edit</span>
-            </td>
             
           </tr>
 
           <tr>
             <td>Cost</td>
             <td>{{$package->cost}}</td>
-            <td>
-                <a href="{{ ("/edit/{$package->id}") }}"><span class="badge bg-info">Edit</span>
-            </td>
             
           </tr>
 

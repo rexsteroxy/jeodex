@@ -12,14 +12,14 @@
                 <form class="form-horizontal" method="POST" action="/add_package" enctype = "multipart/form-data" >
                         {{ csrf_field() }}
 
-                        <div class="form-group{{ $errors->has('tracking_id') ? ' has-error' : '' }}">
+                        <!--div class="form-group{{ $errors->has('tracking_id') ? ' has-error' : '' }}">
                             <label for="firstName" class="col-md-4 control-label">Tracking ID:</label>
 
                             <div class="col-md-6">
                                 <input id="tracking_id" type="text" class="form-control" name="tracking_id"
                                  value="{{ old('tracking_id') }}" required autofocus placeholder="Eg 45678ghjkdbnm">
                             </div>
-                        </div>
+                        </div-->
 
 
                         <div class="form-group{{ $errors->has('sender_name') ? ' has-error' : '' }}">

@@ -18,9 +18,11 @@ Route::get('/', 'PageController@index')->name('home');
 Route::get('/about', 'PageController@about');
 Route::get('/domestic', 'PageController@domestic');
 Route::get('/ecommerce', 'PageController@ecommerce');
-//Route::get('/login', 'PageController@login');
-Route::get('/contact', 'PageController@contact');
 
+Route::get('/contact', 'PageController@contact');
+//Route::get('/track', 'PageController@trackPage');
+//Route::get('/track_id', 'PageController@trackPage');
+Route::post('/track', 'PackageController@getPackage');
 
 // Creating Routes for the Admin pages
     Route::middleware('auth')->group( function() {
@@ -36,6 +38,7 @@ Route::get('/contact', 'PageController@contact');
     Route::get('/edit/{package_id}', 'PackageController@edit');
     Route::post('/update/{package_id}', 'PackageController@update');
     Route::get('/view/{package_id}', 'PackageController@show');
+    Route::get('/delete/{package_id}', 'PackageController@delete');
     
 });
 
