@@ -1,5 +1,4 @@
 @extends('layouts.frontApp')
-@include('includes.messages')
 @section('content')
 
     <div class="site-blocks-cover overlay"  style="background-image: url(images/hero_bg.png); color:black;"
@@ -14,7 +13,7 @@
             <h6 class="text-white mb-5 px-5">Effective logistics Solutions for every business.</h6>
             <form action="/track" method="post" >
               {{ csrf_field() }}
-
+              @include('includes.messages')
               <div class="form-group">
                 <input type="text" class="form-control btn-block"  name="track_id" placeholder="Enter Way Bill Number">
               </div>

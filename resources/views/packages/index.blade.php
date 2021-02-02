@@ -4,10 +4,10 @@
 
 <div class="row">
 
-    <div class="col-lg-9 col-md-12">
+    <div class="col-lg-12 col-md-12">
       <div class="panel panel-default">
         <div class="panel-heading">
-        <h1><i class="fa fa-flag-o red"></i><strong>Uploaded Packages</strong></h1>
+        <i class="fa fa-flag-o red"></i><strong>Uploaded Packages</strong>
         </div>
         <div class="panel-body">
             @foreach($packages as $package)

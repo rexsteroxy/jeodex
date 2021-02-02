@@ -44,12 +44,10 @@
 
 <body>
   <!-- container section start -->
-  <section id="container" class="">
-
     <header class="header dark-bg">
 
       <!--logo start-->
-      <a href="{{ asset('/admin') }}" class="logo">DASH <span class="lite">BOARD</span></a>
+      <a href="{{ asset('/admin') }}" class="logo">Johdex <span class="lite">Logistics</span></a>
       <!--logo end-->
 
       <div class="nav search-row" id="top_menu">
@@ -77,7 +75,7 @@
           <li class="active">
             <a class="" href="{{ asset('/package_upload')}}">
               <i class="icon_house_alt"></i>
-              <span>Delivery Upload</span>
+              <span>Package Upload</span>
             </a>
           </li>
           <li class="active">
@@ -120,30 +118,15 @@
         <!-- notificatoin dropdown end-->
       </div>
     </header>
-    @include('includes.messages')
     <!--header end-->
-  </section>
-  <!--main content end-->
+  
   <!-- container section start -->
-
+        @include('includes.messages')
         @yield('content')
     
         
         
-        </body>
-
-        <div class="text-right">
-          <div class="credits">
-            <!--
-              All the links in the footer should remain intact.
-              You can delete the links only if you purchased the pro version.
-              Licensing information: https://bootstrapmade.com/license/
-              Purchase the pro version form: https://bootstrapmade.com/buy/?theme=NiceAdmin
-            -->
-            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-          </div>
-        </div>
-
+</body>
       <!-- javascripts -->
       <script src="{{ asset('admin_js/jquery.js') }}"></script>
       <script src="{{ asset('admin_js/jquery-ui-1.10.4.min.js') }}"></script>
