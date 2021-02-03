@@ -40,11 +40,11 @@
 <body class="login-img3-body">
 
   <div class="container">
-    @include('includes.messages')
 
     <form class="login-form" action="/login" method="POST">
       {{ csrf_field() }}
       <div class="login-wrap">
+        @include('includes.messages')
         <p class="login-img"><i class="icon_lock_alt"></i></p>
         <div class="input-group">
           <span class="input-group-addon"><i class="icon_profile"></i></span>
@@ -57,6 +57,7 @@
         <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
       </div>
     </form>
+    
     <div class="text-right">
       <div class="credits">
           <!--

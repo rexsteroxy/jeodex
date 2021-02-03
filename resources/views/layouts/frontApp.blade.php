@@ -183,12 +183,39 @@
                   <ul class="dropdown">
                     <li><a href="/domestic">DOMESTIC COURIER SOLUTIONS</a></li>
                     <li><a href="/ecommerce">E-COMMERCE LOGISTICS</a></li>
-                   
                   </ul>
                 </li>
-                <li><a href="/login">Merchant Login</a></li>
                 <li><a href="/contact">Contact</a></li>
-                <li><a href="">MON-SUN : 8AM-8PM</a></li>
+
+                <!--Checking if the admin is loggen in on the home page-->
+                <!-------------------------------------------------------->
+                @if(Auth::check())
+                <li class="dropdown">
+                  <a data-toggle="dropdown" class="dropdown-toggle" href="/admin">
+                                  <span class="profile-ava">
+                                      <img alt="" src="{{ asset('admin_img/avatar1_small.jpg') }}">
+                                  </span>
+                                  <span class="username">{{ Auth::user()->name }}</span>
+                                  <b class="caret"></b>
+                              </a>
+                  <ul class="dropdown-menu extended logout">
+                    <div class="log-arrow-up"></div>
+                    <li class="eborder-top">
+                      <a href="#"><i class="icon_profile"></i> My Profile</a>
+                    </li>
+                    <li>
+                      <a href="/admin"><i class="icon_mail_alt"></i>Dashboard</a>
+                    </li>
+                    <li>
+                      <a href="{{ ('/logout') }}"><i class="icon_key_alt"></i> Log Out</a>
+                    </li>
+                  </ul>
+                </li>
+                @else
+                <li><a href="/login">Merchant Login</a></li>
+                @endif
+                <!--Check Ends------------------------------------------------>
+
               </ul>
             </nav>
           </div>

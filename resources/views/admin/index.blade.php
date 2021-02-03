@@ -15,13 +15,13 @@
         </div>
 
         <div class="row">
+          <!--====== INFO BOX ======-->
           <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
             <div class="info-box blue-bg">
               <i class="fa fa-cloud-download"></i>
               <div class="count">Lagos</div>
               <div class="title">Ikeja</div>
             </div>
-            <!--/.info-box-->
           </div>
           <!--/.col-->
 
@@ -31,7 +31,6 @@
               <div class="count">Delta</div>
               <div class="title">Warri</div>
             </div>
-            <!--/.info-box-->
           </div>
           <!--/.col-->
 
@@ -41,7 +40,6 @@
               <div class="count">Anambra</div>
               <div class="title">Onisha</div>
             </div>
-            <!--/.info-box-->
           </div>
           <!--/.col-->
 
@@ -51,17 +49,14 @@
               <div class="count">Edo</div>
               <div class="title">Benin</div>
             </div>
-            <!--/.info-box-->
           </div>
           <!--/.col-->
-
         </div>
-        <!--/.row-->
-
+        
 
         <div class="row">
+        <!--====== Map Area ======-->
           <div class="col-lg-9 col-md-12">
-
             <div class="panel panel-default">
               <div class="panel-heading">
                 <h2><i class="fa fa-map-marker red"></i><strong>Countries</strong></h2>
@@ -74,9 +69,9 @@
               <div class="panel-body-map">
                 <div id="map" style="height:380px;"></div>
               </div>
-
             </div>
           </div>
+
           <div class="col-md-3">
             <!-- List starts -->
             <ul class="today-datas">
@@ -106,18 +101,14 @@
             </ul>
           </div>
 
-
         </div>
 
 
-        <!-- Today status end -->
-
-
-
         <div class="row">
-
+        <!--====== Registered Users Area ======-->
           <div class="col-lg-12 col-md-12">
-            <div class="panel panel-default">
+            <div class="panel">
+
               <div class="panel-heading">
                 <h2><i class="fa fa-flag-o red"></i><strong>Registered Users</strong></h2>
                 <div class="panel-actions">
@@ -126,6 +117,7 @@
                   <a href="index.html#" class="btn-close"><i class="fa fa-times"></i></a>
                 </div>
               </div>
+
               <div class="panel-body">
                 <table class="table bootstrap-datatable countries">
                   <thead>
@@ -152,7 +144,6 @@
                         <span class="sr-only">73%</span>
                       </td>
                     </tr>
-                    
                   </tbody>
                 </table>
               </div>

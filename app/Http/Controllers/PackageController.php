@@ -26,9 +26,6 @@ class PackageController extends Controller
         return view('packages.upload');
     }
 
-    // Defining the variable $tracking_id
-    //var $tracking_id;
-
     //Adding or Uploading  Packages 
     public function addPackage(Request $request)
     {
@@ -61,7 +58,6 @@ class PackageController extends Controller
 
             $package = new Package;
         
-            //$package->tracking_id = generate_track_id(11);
             $package->sender_name = $request->input('sender_name');
             $package->sender_location = $request->input('sender_location');
             $package->receiver_name = $request->input('receiver_name');
@@ -166,8 +162,10 @@ class PackageController extends Controller
     
     }
 
+    // Getting the tracking page for the client
     public function getPackage(Request $request)
     {
+        //Validating the clients track ID input
         $this->validate($request, [
            "track_id"=>'required'
         ]);
@@ -182,6 +180,12 @@ class PackageController extends Controller
             return redirect('/')->with('error','Invalid Track Code');
         }
        
+    }
+
+    // Returning the view for the delivery update menu in the admin navbar
+    public function deliveryUpdate() 
+    {
+        return view('packages.update');
     }
 
 

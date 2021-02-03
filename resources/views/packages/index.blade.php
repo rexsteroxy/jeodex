@@ -5,7 +5,8 @@
 <div class="row">
 
     <div class="col-lg-12 col-md-12">
-      <div class="panel panel-default">
+      <div class="panel">
+        @include('includes.messages')
         <div class="panel-heading">
         <i class="fa fa-flag-o red"></i><strong>Uploaded Packages</strong>
         </div>

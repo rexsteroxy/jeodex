@@ -44,5 +44,10 @@ class AdminController extends Controller
         return view('admin.index');
     }
 
-    
+    // Method to return the view for the Notification menu in the admin navabr
+    public function notice() 
+    {
+        return view('admin.notice');
+    }
+
 }

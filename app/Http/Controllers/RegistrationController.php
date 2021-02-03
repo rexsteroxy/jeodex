@@ -33,12 +33,8 @@ class RegistrationController extends Controller
             'password' => bcrypt(request('password'))
             ]);
         
-       
         //Sign them in
         Auth::login($user);
-
-        // Send email to admin user
-        //\Mail::to($user)->send(new NotificationMail($user));
 
         //Redirect to the admin the page
         return redirect('admin');

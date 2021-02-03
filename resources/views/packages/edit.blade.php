@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2"> 
        
-            <div class="panel panel-default">
+            <div class="panel">
                 <div class="panel-heading">Modify Packages</div>
 
                 <div class="panel-body">

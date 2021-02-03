@@ -79,13 +79,13 @@
             </a>
           </li>
           <li class="active">
-            <a class="" href="{{ asset('/upload')}}">
+            <a class="" href="{{ asset('/update')}}">
               <i class="icon_house_alt"></i>
               <span>Delivery Update</span>
             </a>
           </li>
           <li class="active">
-            <a class="" href="{{ asset('/upload')}}">
+            <a class="" href="{{ asset('/notifications')}}">
               <i class="icon_house_alt"></i>
               <span>Notifications</span>
             </a>
@@ -121,7 +121,6 @@
     <!--header end-->
   
   <!-- container section start -->
-        @include('includes.messages')
         @yield('content')
     
         

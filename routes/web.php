@@ -12,25 +12,23 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+// Routes for the users pages
 Route::get('/', 'PageController@index')->name('home');
-
 Route::get('/about', 'PageController@about');
 Route::get('/domestic', 'PageController@domestic');
 Route::get('/ecommerce', 'PageController@ecommerce');
-
 Route::get('/contact', 'PageController@contact');
-//Route::get('/track', 'PageController@trackPage');
-//Route::get('/track_id', 'PageController@trackPage');
 Route::post('/track', 'PackageController@getPackage');
 
-// Creating Routes for the Admin pages
+// Routes for the Admin pages
     Route::middleware('auth')->group( function() {
     Route::get('/register', 'RegistrationController@create');
     Route::post('/register', 'RegistrationController@store');
     Route::get('/logout', 'SessionsController@destroy');
 
     Route::get('/admin', 'AdminController@index')->name('admin');
+    Route::get('/notifications', 'AdminController@notice')->name('admin');
+    Route::get('/update', 'PackageController@deliveryUpdate');
 
     Route::get('/packages', 'PackageController@index');
     Route::get('/package_upload', 'PackageController@uploadPackage');
