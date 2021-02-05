@@ -27,7 +27,7 @@ Route::post('/track', 'PackageController@getPackage');
     Route::get('/logout', 'SessionsController@destroy');
 
     Route::get('/admin', 'AdminController@index')->name('admin');
-    Route::get('/notifications', 'AdminController@notice')->name('admin');
+    Route::get('/notifications', 'AdminController@notice');
     Route::get('/update', 'PackageController@deliveryUpdate');
 
     Route::get('/packages', 'PackageController@index');
@@ -37,6 +37,8 @@ Route::post('/track', 'PackageController@getPackage');
     Route::post('/update/{package_id}', 'PackageController@update');
     Route::get('/view/{package_id}', 'PackageController@show');
     Route::get('/delete/{package_id}', 'PackageController@delete');
+
+    Route::any('/search', 'PackageController@search');
     
 });
 

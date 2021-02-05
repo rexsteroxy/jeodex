@@ -34,7 +34,7 @@ class RegistrationController extends Controller
             ]);
         
         //Sign them in
-        Auth::login($user);
+        //Auth::login($user);
 
         //Redirect to the admin the page
         return redirect('admin');

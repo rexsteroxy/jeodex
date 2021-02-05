@@ -188,5 +188,20 @@ class PackageController extends Controller
         return view('packages.update');
     }
 
+    public function search(Request $request)
+    {
+        // Get the search value from the request
+        $keyword = $request->input('search');
+
+        //Search in the Trackiing_id, Receiver_name, Email, Destination and Sender_name from the Packages table
+        $packages = Package::query()
+            ->where('tracking_id', 'LIKE', "%{$keyword}%")
+            ->orWhere('receiver_name', 'LIKE', "%{$keyword}%")
+            ->orWhere('receiver_email', 'LIKE', "%{$keyword}%")
+            ->orWhere('destination', 'LIKE', "%{$keyword}%")
+            ->orWhere('sender_name', 'LIKE', "%{$keyword}%")
+            ->get();
+        return view('packages.search', compact('packages'));
+    }
 
 }

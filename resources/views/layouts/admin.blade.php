@@ -54,8 +54,9 @@
         <!--  search form start -->
         <ul class="nav top-menu">
           <li>
-            <form class="navbar-form">
-              <input class="form-control" placeholder="Search" type="text">
+            <form action="/search" method="GET" class="navbar-form">
+              <input class="form-control" name="search" placeholder="Search" type="text">
+                <button type="submit" class="btn btn-primary">Search</button>
             </form>
           </li>
         </ul>
