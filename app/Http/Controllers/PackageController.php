@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 use App\Models\Package;
+use App\Models\updateStatus;
 use App\Mail\NotificationMail;
 
 class PackageController extends Controller
@@ -30,7 +31,6 @@ class PackageController extends Controller
     public function addPackage(Request $request)
     {
         $this->validate($request, [
-            //"tracking_id"=>'required',
             "sender_name"=>'required',
             "sender_location"=>'required',
             "receiver_name"=>'required',
@@ -75,8 +75,8 @@ class PackageController extends Controller
             $package->save();
 
             // Send email to admin user
-            $data = $request->all();
-            \Mail::to($data['receiver_email'])->send(new NotificationMail($data));
+            //$data = $request->all();
+            //\Mail::to($data['receiver_email'])->send(new NotificationMail($data));
 
            return redirect('/packages')->with('success','Package Uploaded Successfully');
     }
@@ -91,7 +91,6 @@ class PackageController extends Controller
     public function update(Request $request, $package_id)
     {
         $this->validate($request, [
-            //"tracking_id"=>'required',
             "sender_name"=>'required',
             "sender_location"=>'required',
             "receiver_name"=>'required',
@@ -108,7 +107,6 @@ class PackageController extends Controller
             
             $package = Package::find($package_id);
 
-            //$package->tracking_id = $request->input('tracking_id');
             $package->sender_name = $request->input('sender_name');
             $package->sender_location = $request->input('sender_location');
             $package->receiver_name = $request->input('receiver_name');
@@ -120,7 +118,6 @@ class PackageController extends Controller
             $package->description = $request->input('description');
             $package->weight = $request->input('weight');
             $package->cost = $request->input('cost');
-            //$package->tracking_id = $tracking_id;
 
 
             $data = array(
@@ -136,7 +133,7 @@ class PackageController extends Controller
             "description"=>$package->description,
             "weight"=>$package->weight,
             "cost"=>$package->cost,
-            //"tracking_id"=>$package->tracking_id
+           
             );
 
             Package::where('id',$package_id)->update($data);
@@ -180,12 +177,6 @@ class PackageController extends Controller
             return redirect('/')->with('error','Invalid Track Code');
         }
        
-    }
-
-    // Returning the view for the delivery update menu in the admin navbar
-    public function deliveryUpdate() 
-    {
-        return view('packages.update');
     }
 
     public function search(Request $request)

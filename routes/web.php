@@ -28,8 +28,14 @@ Route::post('/track', 'PackageController@getPackage');
 
     Route::get('/admin', 'AdminController@index')->name('admin');
     Route::get('/notifications', 'AdminController@notice');
-    Route::get('/update', 'PackageController@deliveryUpdate');
 
+    Route::get('/status', 'UpdateStatusController@status');
+    Route::get('/view_status/{package_id}', 'UpdateStatusController@viewStatus');
+
+    Route::get('/status_update/{package_id}', 'UpdateStatusController@update');
+    Route::post('/package/{package}/update_status', 'UpdateStatusController@store');
+    
+   
     Route::get('/packages', 'PackageController@index');
     Route::get('/package_upload', 'PackageController@uploadPackage');
     Route::post('/add_package', 'PackageController@addPackage');

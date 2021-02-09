@@ -102,6 +102,7 @@
                             </div>
                         </div>
                     </div>
+                    
                     <div class="order-packages">
                         <!---->
                         <div ace-package="pack" ng-repeat="pack in orderCtrl.order.packages | orderBy:" id""

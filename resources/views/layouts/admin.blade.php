@@ -67,25 +67,25 @@
         <!-- notificatoin dropdown start-->
         <ul class="nav pull-right top-menu">
 
-          <li class="active">
+          <li>
             <a class="" href="{{ asset('/packages')}}">
               <i class="icon_house_alt"></i>
               <span>Packages</span>
             </a>
           </li>
-          <li class="active">
+          <li>
             <a class="" href="{{ asset('/package_upload')}}">
               <i class="icon_house_alt"></i>
               <span>Package Upload</span>
             </a>
           </li>
-          <li class="active">
-            <a class="" href="{{ asset('/update')}}">
+          <li>
+            <a class="" href="{{ asset('/status')}}">
               <i class="icon_house_alt"></i>
-              <span>Delivery Update</span>
+              <span>Delivery Status</span>
             </a>
           </li>
-          <li class="active">
+          <li>
             <a class="" href="{{ asset('/notifications')}}">
               <i class="icon_house_alt"></i>
               <span>Notifications</span>

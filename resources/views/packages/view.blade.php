@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="row">
-<div class="col-lg-12">
+<div class="col-md-8 col-md-offset-2">
     <!--Viewing Unique Packages By their IDs-->
     <section class="panel">
 
