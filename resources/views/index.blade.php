@@ -1,7 +1,7 @@
 @extends('layouts.frontApp')
 @section('content')
 
-    <div class="site-blocks-cover overlay"  style="background-image: url(images/hero_bg.png); color:black;"
+    <div class="site-blocks-cover overlay"  style="background-image: url(images/map.jpg); color:black;"
      data-aos="fade" data-stellar-background-ratio="0.5">
       <div class="container">
         <div class="row align-items-center justify-content-center text-center">
