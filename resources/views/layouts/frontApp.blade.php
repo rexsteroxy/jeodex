@@ -181,8 +181,8 @@
                 <li class="has-children">
                   <a>Our Services</a>
                   <ul class="dropdown">
-                    <li><a href="/domestic">DOMESTIC COURIER SOLUTIONS</a></li>
-                    <li><a href="/ecommerce">E-COMMERCE LOGISTICS</a></li>
+                    <li><a href="#services">LOCAL DELIVERY </a></li>
+                    <li><a href="#services">E-COMMERCE PARTNERSHIP</a></li>
                   </ul>
                 </li>
                 <li><a href="/contact">Contact</a></li>
@@ -240,33 +240,30 @@
     <footer class="site-footer">
       <div class="container">
         <div class="row">
-          <div class="col-md-9">
-            <div class="row">
-              <div class="col-md-3">
-                <h2 class="footer-heading mb-4">JEODEX LOGISTICS</h2>
+
+              <div class="col-md-4  col-lg-4">
+                <h2 class="footer-heading mb-4">JOHDEX LOGISTICS</h2>
                 <ul class="list-unstyled">
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">About Us</a></li>
-                  <li><a href="#">DOMESTIC COURIER SOLUTIONS</a></li>
-                  <li><a href="#">E-COMMERCE LOGISTICS</a></li>
+                  <li><a href="/">Home</a></li>
+                  <li><a href="/about">About Us</a></li>
+                  <li><a href="#services">LOCAL DELIVERY </a></li>
+                  <li><a href="#services">E-COMMERCE PARTNERSHIP</a></li>
                 </ul>
               </div>
 
             
 
-              <div class="col-md-3">
-                <h2 class="footer-heading mb-4">Quici Links</h2>
+              <div class="col-md-4 col-lg-4">
+                <h2 class="footer-heading mb-4">Quick Links</h2>
                 <ul class="list-unstyled">
-                  <li><a href="#">Merchant Login</a></li>
-                  <li><a href="#">Contact</a></li>
-                  <li><a href="">MON-SUN : 8AM-8PM</a></li>
-                  
+                  <li><a href="/login">Merchant Login</a></li>
+                  <li><a href="/contact">Contact</a></li>
                 </ul>
               </div>
 
 
               
-              <div class="col-md-3">
+              <div class="col-md-4  col-lg-4">
                 <h2 class="footer-heading mb-4">Follow Us</h2>
                 <a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
                 <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
@@ -274,38 +271,20 @@
                 <a href="#" class="pl-3 pr-3"><span class="icon-linkedin"></span></a>
               </div>
 
-
-            </div>
-          </div>
-          <div class="col-md-3">
-            <h2 class="footer-heading mb-4">Subscribe Newsletter</h2>
-            <form action="#" method="post">
-              <div class="input-group mb-3">
-                <input type="text" class="form-control border-secondary text-white bg-transparent" placeholder="Enter Email" aria-label="Enter Email" aria-describedby="button-addon2">
-                <div class="input-group-append">
-                  <button class="btn btn-primary text-white" type="button" id="button-addon2">Send</button>
-                </div>
-              </div>
-            </form>
-          </div>
         </div>
         <div class="row pt-5 mt-5 text-center">
           <div class="col-md-8">
             <div class="border-top pt-5">
-            <p>
-           
-            Copyright &copy;<script>document.write(new Date().getFullYear());</script> 
+            <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> 
             All rights reserved | Powered by <i class="icon-heart" aria-hidden="true">
-
             </i> by <a href="https://owerritechhub.com" target="_blank" >Owerri-Tech-Hub</a>
-          
             </p>
             </div>
           </div>
           <div class="col-md-4">
             <h2 class="footer-heading mb-4">Quick Contact</h2>
-            <a href="#" style=color:white">CALL : (+234)90 370 962 90</a>
-            <a href="#" style=color:white">Email:info@jeodex.com</a>
+            <a href="#" style="color:white">CALL : (+234)90 370 962 90</a>
+            <a href="mailto:johdexlogistics@gmail.com" style="color:white">Email: johdexlogistics@gmail.com</a>
            
           </div>
           
