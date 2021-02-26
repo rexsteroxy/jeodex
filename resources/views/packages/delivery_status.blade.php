@@ -16,26 +16,29 @@
           </div>
 
           <div class="panel-body">
+        
             @if(count($updateStatuses)  > 0)
-            @foreach($updateStatuses as $updateStatus)
             <table class="table bootstrap-datatable countries">
-              <thead>
+            <thead>
                 <tr>
                   <th>Tracking ID</th>
                   <th>Current Location</th>
-                  <th>Previous Location</th>
+                  <th>Date</th>
                   <th></th>
                 </tr>
               </thead>
               <tbody>
+            @foreach($updateStatuses as $updateStatus)
+             
                 <tr>
                   <td>{{$updateStatus->tracking_id}}</td>
                   <td>{{$updateStatus->current_location}}</td>
                   <td>{{$updateStatus->previous_location}}</td>
                 </tr>
-              </tbody>
-            </table>
+              
             @endforeach
+            </tbody>
+            </table>
             @else
               <h4>No Updates Yet</h4>
             @endif
