@@ -11,8 +11,14 @@ use App\Mail\NotificationMail;
 class RegistrationController extends Controller
 {
     public function create() 
-    {
-        return view('admin.create');
+    {  
+        if (Auth::user()->super_admin === 1) {
+            return view('admin.create');
+        }
+        else {
+            return redirect('/admin');
+        }
+        
     }
 
     public function store() 

@@ -70,7 +70,7 @@
           <li>
             <a class="" href="{{ asset('/packages')}}">
               <i class="icon_house_alt"></i>
-              <span>Packages</span>
+              <span>Deliveries</span>
             </a>
           </li>
           <li>
@@ -85,18 +85,18 @@
               <span>Delivery Status</span>
             </a>
           </li>
-          <li>
+          {{-- <li>
             <a class="" href="{{ asset('/notifications')}}">
               <i class="icon_house_alt"></i>
               <span>Notifications</span>
             </a>
-          </li>
+          </li> --}}
          
           <!-- user login dropdown start-->
           <li class="dropdown">
             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                             <span class="profile-ava">
-                                <img alt="" src="{{ asset('admin_img/avatar1_small.jpg') }}">
+                                <img style="width: 5.5rem; height:5.5rem" alt="" src="{{ asset('public/Admins/'. Auth::user()->image ) }}">
                             </span>
                             <span class="username">{{ Auth::user()->name }}</span>
                             <b class="caret"></b>
@@ -104,10 +104,10 @@
             <ul class="dropdown-menu extended logout">
               <div class="log-arrow-up"></div>
               <li class="eborder-top">
-                <a href="#"><i class="icon_profile"></i> My Profile</a>
+                <a href="/profile/{{ Auth::user()->id }}"><i class="icon_profile"></i> My Profile</a>
               </li>
               <li>
-                <a href="#"><i class="icon_mail_alt"></i> Deliveries</a>
+                <a href="/packages"><i class="icon_mail_alt"></i> Deliveries</a>
               </li>
               <li>
                 <a href="{{ ('/logout') }}"><i class="icon_key_alt"></i> Log Out</a>

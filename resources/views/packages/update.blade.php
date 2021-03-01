@@ -21,6 +21,10 @@
                                 <input id="tracking_id" type="text" class="form-control" value="{{$package->tracking_id}}" name="tracking_id"
                                 required autofocus placeholder="Eg Germany">
                             </div>
+                            <div class="col-md-6">
+                                <input id="tracking_id" type="hidden" class="form-control" value="{{$package->id}}" name="package_id"
+                                required autofocus placeholder="Eg Germany">
+                            </div>
                         </div>
 
                         <div class="form-group">
@@ -36,7 +40,7 @@
                             <label for="previous_location" class="col-md-4 control-label">Previous Location</label>
 
                             <div class="col-md-6">
-                                <input id="previous_location" type="text" class="form-control" value="{{$package->sender_location}}" name="previous_location"
+                                <input id="previous_location" type="text" class="form-control" value="{{$package->current_location}}" name="previous_location"
                                 required autofocus placeholder="Eg France">
                             </div>
                         </div>

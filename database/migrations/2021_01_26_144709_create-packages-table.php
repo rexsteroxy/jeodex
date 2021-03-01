@@ -23,6 +23,7 @@ class CreatePackagesTable extends Migration
             $table->string('receiver_phonenumber');
             $table->string('receiver_address');
             $table->string('destination');
+            $table->string('current_location');
             $table->string('delivery_date');
             $table->string('description');
             $table->string('weight');

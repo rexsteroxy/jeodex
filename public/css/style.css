@@ -1379,7 +1379,9 @@ h1, h2, h3, h4, h5,
   border-radius: 50%;
   display: inline-block;
   background: #f89d13;
-  color: #fff; }
+  color: #fff; 
+  
+}
 
 .custom-pagination span {
   background: #e6e6e6;

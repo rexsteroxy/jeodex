@@ -6,18 +6,21 @@
         <div class="panel">
         @include('includes.messages')
           <div class="panel-heading">
+            @if(count($updateStatuses)  > 0)
             <h2>Delivery Status</h2>
-            <div class="progress thin">
-                <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-                </div>
-                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                </div>
-              </div>
+            @if($status)
+            <div class="progress">
+              <div class="progress-bar bg-success" role="progressbar" style="width: 100%; background: green" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            @else
+            <div class="progress">
+              <div class="progress-bar bg-success" role="progressbar" style="width: 100%; background: yellow" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            @endif
           </div>
 
           <div class="panel-body">
         
-            @if(count($updateStatuses)  > 0)
             <table class="table bootstrap-datatable countries">
             <thead>
                 <tr>

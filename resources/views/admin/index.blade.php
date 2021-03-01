@@ -19,8 +19,8 @@
           <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
             <div class="info-box blue-bg">
               <i class="fa fa-cloud-download"></i>
-              <div class="count">Lagos</div>
-              <div class="title">Ikeja</div>
+              <div class="count">Package</div>
+              <div class="title">Delivery</div>
             </div>
           </div>
           <!--/.col-->
@@ -28,8 +28,8 @@
           <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
             <div class="info-box brown-bg">
               <i class="fa fa-shopping-cart"></i>
-              <div class="count">Delta</div>
-              <div class="title">Warri</div>
+              <div class="count">Package</div>
+              <div class="title">Upload</div>
             </div>
           </div>
           <!--/.col-->
@@ -37,8 +37,8 @@
           <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
             <div class="info-box dark-bg">
               <i class="fa fa-thumbs-o-up"></i>
-              <div class="count">Anambra</div>
-              <div class="title">Onisha</div>
+              <div class="count">Delivery</div>
+              <div class="title">Status</div>
             </div>
           </div>
           <!--/.col-->
@@ -46,8 +46,8 @@
           <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
             <div class="info-box green-bg">
               <i class="fa fa-cubes"></i>
-              <div class="count">Edo</div>
-              <div class="title">Benin</div>
+              <div class="count"><a href="/admin/management">Admin</a></div>
+              <div class="title">Management</div>
             </div>
           </div>
           <!--/.col-->

@@ -15,8 +15,8 @@ use Illuminate\Support\Facades\Route;
 // Routes for the users pages
 Route::get('/', 'PageController@index')->name('home');
 Route::get('/about', 'PageController@about');
-Route::get('/domestic', 'PageController@domestic');
-Route::get('/ecommerce', 'PageController@ecommerce');
+//Route::get('/domestic', 'PageController@domestic');
+//Route::get('/ecommerce', 'PageController@ecommerce');
 Route::get('/contact', 'PageController@contact');
 Route::post('/track', 'PackageController@getPackage');
 
@@ -26,8 +26,16 @@ Route::post('/track', 'PackageController@getPackage');
     Route::post('/register', 'RegistrationController@store');
     Route::get('/logout', 'SessionsController@destroy');
 
+    Route::get('/admin/management', 'AdminController@manage');
+    Route::get('/admin/delete/{user_id}', 'AdminController@deleteAdmin');
+
+    Route::get('/profile/{user}', 'AdminController@profile');
+
+    Route::get('/profile/edit/{user}', 'AdminController@edit');
+    Route::post('/profile/update/{user}', 'AdminController@update');
+
     Route::get('/admin', 'AdminController@index')->name('admin');
-    Route::get('/notifications', 'AdminController@notice');
+    //Route::get('/notifications', 'AdminController@notice');
 
     Route::get('/status', 'UpdateStatusController@status');
     Route::get('/view_status/{package_id}', 'UpdateStatusController@viewStatus');

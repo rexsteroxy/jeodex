@@ -38,6 +38,7 @@ class PackageController extends Controller
             "receiver_phonenumber"=>'required',
             "receiver_address"=>'required',
             "destination"=>'required',
+            "current_location"=>'required',
             "delivery_date"=>'required',
             "description"=>'required',
             "weight"=>'required',
@@ -65,6 +66,7 @@ class PackageController extends Controller
             $package->receiver_phonenumber = $request->input('receiver_phonenumber');
             $package->receiver_address = $request->input('receiver_address');
             $package->destination = $request->input('destination');
+            $package->current_location = $request->input('current_location');
             $package->delivery_date = $request->input('delivery_date');
             $package->description = $request->input('description');
             $package->weight = $request->input('weight');
@@ -98,6 +100,7 @@ class PackageController extends Controller
             "receiver_phonenumber"=>'required',
             "receiver_address"=>'required',
             "destination"=>'required',
+            "current_location"=>'required',
             "delivery_date"=>'required',
             "description"=>'required',
             "weight"=>'required',
@@ -114,6 +117,7 @@ class PackageController extends Controller
             $package->receiver_phonenumber = $request->input('receiver_phonenumber');
             $package->receiver_address = $request->input('receiver_address');
             $package->destination = $request->input('destination');
+            $package->current_location = $request->input('current_location');
             $package->delivery_date = $request->input('delivery_date');
             $package->description = $request->input('description');
             $package->weight = $request->input('weight');
@@ -129,6 +133,7 @@ class PackageController extends Controller
             "receiver_phonenumber"=>$package->receiver_phonenumber,
             "receiver_address"=>$package->receiver_address,
             "destination"=>$package->destination,
+            "current_location"=>$package->current_location,
             "delivery_date"=>$package->delivery_date,
             "description"=>$package->description,
             "weight"=>$package->weight,

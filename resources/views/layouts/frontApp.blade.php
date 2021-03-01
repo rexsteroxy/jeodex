@@ -176,8 +176,8 @@
             <nav class="site-navigation position-relative text-right" role="navigation">
 
               <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
-                <li class="active"><a href="/">Home</a></li>
-                <li><a href="/about">About Us</a></li>
+                <li class="{{ (request()->is('/')) ? 'active' : '' }}"><a href="{{url('/')}}">Home</a></li>
+                <li class="{{ (request()->is('/about')) ? 'active' : '' }}"><a href="{{url('/about')}}">About Us</a></li>
                 <li class="has-children">
                   <a>Our Services</a>
                   <ul class="dropdown">
@@ -185,7 +185,7 @@
                     <li><a href="#services">E-COMMERCE PARTNERSHIP</a></li>
                   </ul>
                 </li>
-                <li><a href="/contact">Contact</a></li>
+                <li class="{{ (request()->is('/contact')) ? 'active' : '' }}"><a href="{{url('/contact')}}">Contact</a></li>
 
                 <!--Checking if the admin is loggen in on the home page-->
                 <!-------------------------------------------------------->
@@ -193,7 +193,7 @@
                 <li class="dropdown">
                   <a data-toggle="dropdown" class="dropdown-toggle" href="/admin">
                                   <span class="profile-ava">
-                                      <img alt="" src="{{ asset('admin_img/avatar1_small.jpg') }}">
+                                      <img style="width: 3.5rem; height:3.5rem; border-radius: 20px; border:2px solid #686823" alt="" src="{{ asset('public/Admins/'. Auth::user()->image ) }}">
                                   </span>
                                   <span class="username">{{ Auth::user()->name }}</span>
                                   <b class="caret"></b>

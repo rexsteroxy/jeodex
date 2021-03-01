@@ -29,21 +29,41 @@ class UpdateStatusController extends Controller
             'previous_location' => 'required'
         ]);
 
-       
        UpdateStatus::create([
         'tracking_id' => request('tracking_id'),
         'current_location' => request('current_location'),
         'previous_location' => request('previous_location'),
         'package_id' => $package->id
        ]);
+        $package_id = request('package_id');
+       $package = Package::find($package_id);
+
+       $data = array(
+        
+        "current_location"=>request('current_location'),
+       
+        );
+
+        Package::where('id',$package_id)->update($data);
+        $package->update();
         
         return redirect('/status')->with('success', 'Delivery Status Updated');
     }
 
-    public function viewStatus($package_id)
+    public function viewStatus($id)
     {
-        $updateStatuses = UpdateStatus::where('package_id', '=', $package_id)->get();
-        return view('packages.delivery_status')->with('updateStatuses', $updateStatuses);
+     $status = false;
+     //get destination
+        $updateStatuses = UpdateStatus::where('package_id', '=', $id)->get();
+        $package = Package::find($id);
+        
+        if ($package->current_location == $package->destination) {
+            //set status to true
+            $status = true;
     }
+        return view('packages.delivery_status', compact('updateStatuses', 'status'));
+    }
+
+
 
 }

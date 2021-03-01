@@ -79,6 +79,15 @@
                             </div>
                         </div>
 
+                        <div class="form-group{{ $errors->has('current_location') ? ' has-error' : '' }}">
+                            <label for="current_location" class="col-md-4 control-label">Current Location</label>
+
+                            <div class="col-md-6">
+                                <input id="current_location" type="text" class="form-control" name="current_location"
+                                 value="{{ old('current_location') }}" required autofocus placeholder="Eg France">
+                            </div>
+                        </div>
+
                         <div class="form-group{{ $errors->has('delivery_date') ? ' has-error' : '' }}">
                             <label for="firstName" class="col-md-4 control-label">Estimated Delivery Date</label>
 

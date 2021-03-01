@@ -48,6 +48,7 @@
           <span class="input-group-addon"><i class="icon_key_alt"></i></span>
           <input type="password" name="password_confirmation" class="form-control" placeholder="Password Confirmation">
         </div>
+        
         <button class="btn btn-primary btn-lg btn-block" type="submit">Register Admin</button>
       </div>
     </form>
