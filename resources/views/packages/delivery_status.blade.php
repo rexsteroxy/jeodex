@@ -9,12 +9,14 @@
             @if(count($updateStatuses)  > 0)
             <h2>Delivery Status</h2>
             @if($status)
+            <h2 style="color:green; text-align:center">: Delivered</h2>
             <div class="progress">
               <div class="progress-bar bg-success" role="progressbar" style="width: 100%; background: green" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
             @else
+            <h2 style="color:red; text-align:center">: Pending</h2>
             <div class="progress">
-              <div class="progress-bar bg-success" role="progressbar" style="width: 100%; background: yellow" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+              <div class="progress-bar bg-success" role="progressbar" style="width: 100%; background: red" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
             @endif
           </div>
