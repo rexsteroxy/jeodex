@@ -172,23 +172,24 @@
       <div class="container">
         <div class="row align-items-center">
           
-          <div class="col-11 col-xl-2">
-            <img src="images/johdexLogo.png" alt="Logo" width="100" height="100">
+          <div class="col-11 col-xl-2" style="margin-left: 60px">
+            <img src="images/johdexLogo.png" alt="Logo" width="200" height="100" >
           </div>
           <div class="col-12 col-md-10 d-none d-xl-block">
             <nav class="site-navigation position-relative text-right" role="navigation">
 
               <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
-                <li class="active"><a href="{{url('/')}}">Home</a></li>
-                <li class="active"><a href="{{url('/about')}}">About Us</a></li>
-                <li class="has-children">
-                  <a>Our Services</a>
-                  <ul class="dropdown">
+                <li class="{{ $index_page ? 'active' : '' }}"><a href="{{url('/')}}">Home</a></li>
+                <li class="{{ $about_page ? 'active' : '' }}"><a href="{{url('/about')}}">About Us</a></li>
+                <li >
+                <!-- <li class="has-children"> -->
+                  <a href="#services">Services</a>
+                  <!-- <ul class="dropdown">
                     <li><a href="#services">LOCAL DELIVERY </a></li>
                     <li><a href="#services">E-COMMERCE PARTNERSHIP</a></li>
-                  </ul>
+                  </ul> -->
                 </li>
-                <li class="active"><a href="{{url('/contact')}}">Contact</a></li>
+                <li class="{{ $contact_page ? 'active' : '' }}"><a href="{{url('/contact')}}">Contact</a></li>
 
                 <!--Checking if the admin is loggen in on the home page-->
                 <!-------------------------------------------------------->

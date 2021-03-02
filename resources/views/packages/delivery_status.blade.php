@@ -16,9 +16,11 @@
               <div class="progress-bar bg-success" role="progressbar" style="width: 100%; background: green" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
             @else
-            <h2 style="color:red; text-align:center">: Pending</h2>
+            <h1>
+                  <strong style="padding:10px">Package Delivery: <span style="color: yellow;">Pending</span></strong>
+              </h1>  
             <div class="progress">
-              <div class="progress-bar bg-success" role="progressbar" style="width: 100%; background: red" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+              <div class="progress-bar bg-success" role="progressbar" style="width: 100%; background: yellow" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
             @endif
           </div>
@@ -40,7 +42,7 @@
                 <tr>
                   <td>{{$updateStatus->tracking_id}}</td>
                   <td>{{$updateStatus->current_location}}</td>
-                  <td>{{$updateStatus->previous_location}}</td>
+                  <td>{{$updateStatus->updated_at->diffForHumans()}}</td>
                 </tr>
               
             @endforeach
@@ -57,6 +59,11 @@
 
       </div>
      
+    </div>
+
+    <div class="row" style="margin-left: 50px">
+    <button class="btn btn-primary"><a href="{{ url("/status") }}" style="color:white">Back</a></button>
+    
     </div>
 
 

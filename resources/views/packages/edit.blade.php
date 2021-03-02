@@ -137,6 +137,10 @@
         </div>
     </div>
 
+    <div class="row" style="margin-left: 100px">
+    <button class="btn btn-primary"><a href="{{ url("/packages") }}" style="color:white">Back</a></button>  
+    </div>
+
 @endsection
 
 

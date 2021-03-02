@@ -30,9 +30,9 @@
                   <td>{{$package->tracking_id}}</td>
                   <td>{{$package->receiver_name}}</td>
                   <td>{{$package->destination}}</td>
-                  <td>{{$package->sender_location}}</td>
+                  <td>{{$package->current_location}}</td>
             
-                  <td><a href="{{ url("/view_status/{$package->id}") }}"><span class="btn btn-warning">Status</span></a></td>
+                  <td><a href="{{ url("/view_status/{$package->id}") }}"><span class="btn btn-warning">View Status</span></a></td>
                   <td><a href="{{ url("/status_update/{$package->id}") }}"><span class="btn btn-danger">Update Status</span></a></td>
                 </tr>
 

@@ -9,7 +9,7 @@
           <div class="col-md-8" data-aos="fade-up" data-aos-delay="400">
             
 
-            <h1 class="text-white font-weight-light mb-5 text-uppercase ">...Swift delivery always!</h1>
+            <h1 class="text-white font-weight-light mb-5 text-uppercase " style="margin-top: 10px">...Swift delivery always!</h1>
             <h6 class="text-white mb-5 px-5">Effective Logistics Solutions For Every Business</h6>
             <form action="/track" method="post" >
               {{ csrf_field() }}

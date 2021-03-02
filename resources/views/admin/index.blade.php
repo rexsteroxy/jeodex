@@ -19,7 +19,7 @@
           <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
             <div class="info-box dark-bg">
               <i class="fa fa-cloud-download"></i>
-              <div class="count"><a href="/admin/management">Package</a></div>
+              <div class="count"><a href="/packages">Package</a></div>
               <div class="title">Lists</div>
             </div>
           </div>
@@ -28,7 +28,7 @@
           <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
             <div class="info-box green-bg">
               <i class="fa fa-shopping-cart"></i>
-              <div class="count"><a href="/admin/management">Package</a></div>
+              <div class="count"><a href="/package_upload">Package</a></div>
               <div class="title">Upload</div>
             </div>
           </div>
@@ -37,7 +37,7 @@
           <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
             <div class="info-box yellow-bg">
               <i class="fa fa-thumbs-o-up"></i>
-              <div class="count"><a href="/admin/management">Delivery</a></div>
+              <div class="count"><a href="/status">Delivery</a></div>
               <div class="title">Status</div>
             </div>
           </div>

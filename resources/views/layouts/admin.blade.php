@@ -68,7 +68,7 @@
         <ul class="nav pull-right top-menu">
 
           <li>
-            <a class="" href="{{ asset('/')}}">
+            <a class="" href="{{ asset('/admin')}}">
               <i class="icon_house_alt"></i>
               <span>Home</span>
             </a>

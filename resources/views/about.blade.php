@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <div class="site-blocks-cover inner-page-cover overlay" style="background-image: url(images/map.jpg); color:black;">
+    <div class="site-blocks-cover inner-page-cover overlay" style="background-image: url(images/hero_bg.png); color:black;">
       <div class="container">
         <div class="row align-items-center justify-content-center text-center">
 
