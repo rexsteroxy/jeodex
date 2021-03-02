@@ -1,13 +1,16 @@
 @extends('layouts.admin')
 
 @section('content')
-
+<div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2"> 
        
-            <div class="panel">
-                <div class="panel-heading">Delivery Update</div>
-
+            <div class="panel" style="margin-top: 100px;">
+                <div class="panel-heading" style="background: #262947; color:#ffffff;">
+                    <h1>
+                      <strong style="padding:10px">Delivery Status</strong>
+                    </h1>  
+                  </div>
                 <div class="panel-body">
                     @if(count($packages)  > 0)
                     @foreach($packages as $package)
@@ -61,7 +64,7 @@
             </div>
         </div>
     </div>
-
+</div>
 @endsection
 
 

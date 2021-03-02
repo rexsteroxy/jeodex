@@ -1,14 +1,16 @@
 @extends('layouts.admin')
 
 @section('content')
+<div class="container">
 <div class="row">
       <div class="col-md-8 col-md-offset-2">
-        <div class="panel">
+        <div class="panel" style="margin-top: 100px;">
         @include('includes.messages')
-          <div class="panel-heading">
-            <h2>Status Update</h2>
-          </div>
-
+          <div class="panel-heading" style="background: #262947; color:#ffffff;">
+              <h1>
+                <strong style="padding:10px">Status Update</strong>
+              </h1>  
+            </div>
           <div class="panel-body">
             <table class="table bootstrap-datatable countries">
               <thead>
@@ -44,5 +46,5 @@
       </div>
      
     </div>
-
+  </div>
 @endsection

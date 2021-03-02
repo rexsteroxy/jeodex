@@ -193,15 +193,19 @@
                 <li class="dropdown">
                   <a data-toggle="dropdown" class="dropdown-toggle" href="/admin">
                                   <span class="profile-ava">
-                                      <img style="width: 3.5rem; height:3.5rem; border-radius: 20px; border:2px solid #686823" alt="" src="{{ asset('public/Admins/'. Auth::user()->image ) }}">
+                                    @if (Auth::user()->image == null)
+                                    <img style="width: 2.3rem; height:2.3rem" alt="" src="{{ asset('admin_img/avatar.png' ) }}">
+                                    @else 
+                                    <img style="width: 2.3rem; height:2.3rem" alt="" src="{{ asset('public/Admins/'. Auth::user()->image ) }}">
+                                    @endif
                                   </span>
                                   <span class="username">{{ Auth::user()->name }}</span>
                                   <b class="caret"></b>
                               </a>
                   <ul class="dropdown-menu extended logout">
-                    <div class="log-arrow-up"></div>
+                    {{-- <div class="log-arrow-up"></div> --}}
                     <li class="eborder-top">
-                      <a href="#"><i class="icon_profile"></i> My Profile</a>
+                      <a href="/profile/{{Auth::user()->id}}"><i class="icon_profile"></i> My Profile</a>
                     </li>
                     <li>
                       <a href="/admin"><i class="icon_mail_alt"></i>Dashboard</a>

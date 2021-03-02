@@ -5,8 +5,12 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2"> 
        
-            <div class="panel">
-                <div class="panel-heading">Modify Packages</div>
+            <div class="panel" style="margin-top: 100px;">
+                <div class="panel-heading" style="background: #262947; color:#ffffff;">
+                    <h1>
+                      <strong style="padding:10px">Modify Package</strong>
+                    </h1>  
+                  </div>
 
                 <div class="panel-body">
                 <form class="form-horizontal" method="POST" action="{{ url('/update', array($package->id)) }}" enctype = "multipart/form-data" >
@@ -120,7 +124,7 @@
 
                         <div class="form-group">
                             <div class="col-md-8 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary" style="margin-top:10px">
+                                <button type="submit" class="btn btn-warning" style="margin-top:10px">
                                     Edit Package
                                 </button>
                             </div>
