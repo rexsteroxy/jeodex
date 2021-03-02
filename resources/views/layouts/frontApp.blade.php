@@ -176,8 +176,8 @@
             <nav class="site-navigation position-relative text-right" role="navigation">
 
               <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
-                <li class="{{ (request()->is('/')) ? 'active' : '' }}"><a href="{{url('/')}}">Home</a></li>
-                <li class="{{ (request()->is('/about')) ? 'active' : '' }}"><a href="{{url('/about')}}">About Us</a></li>
+                <li class="active"><a href="{{url('/')}}">Home</a></li>
+                <li class="active"><a href="{{url('/about')}}">About Us</a></li>
                 <li class="has-children">
                   <a>Our Services</a>
                   <ul class="dropdown">
@@ -185,11 +185,11 @@
                     <li><a href="#services">E-COMMERCE PARTNERSHIP</a></li>
                   </ul>
                 </li>
-                <li class="{{ (request()->is('/contact')) ? 'active' : '' }}"><a href="{{url('/contact')}}">Contact</a></li>
+                <li class="active"><a href="{{url('/contact')}}">Contact</a></li>
 
                 <!--Checking if the admin is loggen in on the home page-->
                 <!-------------------------------------------------------->
-                @if(Auth::check())
+                 @if(Auth::check())
                 <li class="dropdown">
                   <a data-toggle="dropdown" class="dropdown-toggle" href="/admin">
                                   <span class="profile-ava">
@@ -203,8 +203,8 @@
                                   <b class="caret"></b>
                               </a>
                   <ul class="dropdown-menu extended logout">
-                    {{-- <div class="log-arrow-up"></div> --}}
-                    <li class="eborder-top">
+                   <div class="log-arrow-up"></div>
+                   <li class="eborder-top">
                       <a href="/profile/{{Auth::user()->id}}"><i class="icon_profile"></i> My Profile</a>
                     </li>
                     <li>
@@ -217,7 +217,7 @@
                 </li>
                 @else
                 <li><a href="/login">Merchant Login</a></li>
-                @endif
+                @endif 
                 <!--Check Ends------------------------------------------------>
 
               </ul>
@@ -225,7 +225,7 @@
           </div>
 
 
-          <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a></div>
+          <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-white active"><span class="icon-menu h3"></span></a></div>
 
           </div>
 
