@@ -9,7 +9,7 @@
   <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
   <link rel="shortcut icon" href="{{ asset('admin_img/favicon.png') }}">
 
-  <title>Admin Dashboard</title>
+  <title>Johdex Admin Dashboard</title>
 
   <!-- Bootstrap CSS -->
   <link href="{{ asset('admin_css/bootstrap.min.css') }}" rel="stylesheet">
@@ -68,6 +68,13 @@
         <ul class="nav pull-right top-menu">
 
           <li>
+            <a class="" href="{{ asset('/')}}">
+              <i class="icon_house_alt"></i>
+              <span>Home</span>
+            </a>
+          </li>
+
+          <li>
             <a class="" href="{{ asset('/packages')}}">
               <i class="icon_house_alt"></i>
               <span>Deliveries</span>
@@ -96,7 +103,11 @@
           <li class="dropdown">
             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                             <span class="profile-ava">
-                                <img style="width: 5.5rem; height:5.5rem" alt="" src="{{ asset('public/Admins/'. Auth::user()->image ) }}">
+                              @if (Auth::user()->image == null)
+                              <img style="width: 5.5rem; height:5.5rem" alt="" src="{{ asset('admin_img/avatar.png' ) }}">
+                              @else 
+                              <img style="width: 5.5rem; height:5.5rem" alt="" src="{{ asset('public/Admins/'. Auth::user()->image ) }}">
+                              @endif
                             </span>
                             <span class="username">{{ Auth::user()->name }}</span>
                             <b class="caret"></b>

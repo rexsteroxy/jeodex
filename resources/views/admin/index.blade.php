@@ -7,9 +7,9 @@
         <!--overview start-->
         <div class="row">
           <div class="col-lg-12">
-            <h3 class="page-header"><i class="fa fa-laptop"></i> Dashboard</h3>
+            <h3 class="page-header" style="color: blue;"><i class="fa fa-laptop"></i> Dashboard</h3>
             <ol class="breadcrumb">
-              <li><i class="fa fa-home"></i><a href="/">Home</a></li>
+              <li><i class="fa fa-home"></i><a style="font-size: 15px;" href="/">Home</a></li>
             </ol>
           </div>
         </div>
@@ -17,40 +17,49 @@
         <div class="row">
           <!--====== INFO BOX ======-->
           <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-            <div class="info-box blue-bg">
-              <i class="fa fa-cloud-download"></i>
-              <div class="count">Package</div>
-              <div class="title">Delivery</div>
-            </div>
-          </div>
-          <!--/.col-->
-
-          <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-            <div class="info-box brown-bg">
-              <i class="fa fa-shopping-cart"></i>
-              <div class="count">Package</div>
-              <div class="title">Upload</div>
-            </div>
-          </div>
-          <!--/.col-->
-
-          <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
             <div class="info-box dark-bg">
-              <i class="fa fa-thumbs-o-up"></i>
-              <div class="count">Delivery</div>
-              <div class="title">Status</div>
+              <i class="fa fa-cloud-download"></i>
+              <div class="count"><a href="/admin/management">Package</a></div>
+              <div class="title">Lists</div>
             </div>
           </div>
           <!--/.col-->
 
           <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
             <div class="info-box green-bg">
+              <i class="fa fa-shopping-cart"></i>
+              <div class="count"><a href="/admin/management">Package</a></div>
+              <div class="title">Upload</div>
+            </div>
+          </div>
+          <!--/.col-->
+
+          <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+            <div class="info-box yellow-bg">
+              <i class="fa fa-thumbs-o-up"></i>
+              <div class="count"><a href="/admin/management">Delivery</a></div>
+              <div class="title">Status</div>
+            </div>
+          </div>
+          <!--/.col-->
+          @if (Auth::user()->super_admin === 1)
+          <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+            <div class="info-box red-bg">
               <i class="fa fa-cubes"></i>
               <div class="count"><a href="/admin/management">Admin</a></div>
               <div class="title">Management</div>
             </div>
           </div>
-          <!--/.col-->
+          @else 
+          <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+            <div class="info-box red-bg">
+              <i class="fa fa-cubes"></i>
+              <div class="count"><a href="/profile/{{Auth::user()->id}}">Admin</a></div>
+              <div class="title">Profile</div>
+            </div>
+          </div>
+          @endif
+          
         </div>
         
 

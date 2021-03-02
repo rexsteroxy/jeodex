@@ -1,19 +1,20 @@
 @extends('layouts.admin')
 
 @section('content')
+<div class="containr">
 <div class="row">
 <div class="col-md-8 col-md-offset-2">
     <!--Viewing Unique Packages By their IDs-->
-    <section class="panel">
+    <section class="panel" style="margin-top: 100px">
 
     @if(count($packages)  > 0)
         @foreach($packages->all() as $package)
-
-            <div class="panel-heading">
-                <h3>The Package with Tracking ID: <strong>{{$package->tracking_id}}</strong></h3>
-                <a href="{{ ("/edit/{$package->id}") }}" class="badge badge-warning">Edit</a>
-            </div>
-
+        <div class="panel-heading" style="background: #262947; color:#ffffff;">
+          <h1>
+            <strong style="padding:10px">Tracking ID:  {{$package->tracking_id}}</strong>
+          <a style="float: right;" href="{{ ("/edit/{$package->id}") }}"><span class="btn btn-warning">Edit Delivery</span></a>
+          </h1>  
+        </div>
       <table class="table table-hover personal-task">
         <tbody>
           <tr>
@@ -98,6 +99,7 @@
     </section>
     <!--Project Activity end-->
   </div>
+</div>
 </div>
 @endsection
 

@@ -1,12 +1,16 @@
 @extends('layouts.admin')
 
 @section('content')
-
+<div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2"> 
        
-            <div class="panel">
-                <div class="panel-heading">Package Upload</div>
+            <div class="panel" style="margin-top: 100px;">
+                <div class="panel-heading" style="background: #262947; color:#ffffff;">
+                    <h1 style="text-align: center;">
+                      <strong style="padding:10px">Upload Package Delivery</strong>
+                    </h1>  
+                  </div>
 
                 <div class="panel-body">
                 <form class="form-horizontal" method="POST" action="/add_package" enctype = "multipart/form-data" >
@@ -141,6 +145,7 @@
             </div>
         </div>
     </div>
+</div>
 
 @endsection
 

@@ -3,13 +3,15 @@
 @section('content')
 <div class="row">
       <div class="col-md-8 col-md-offset-2">
-        <div class="panel">
-        @include('includes.messages')
-          <div class="panel-heading">
-            @if(count($updateStatuses)  > 0)
-            <h2>Delivery Status</h2>
-            @if($status)
-            <h2 style="color:green; text-align:center">: Delivered</h2>
+        <div class="panel" style="margin-top: 100px;">
+          @include('includes.messages')
+            <div class="panel-heading" style="background: #262947; color:#ffffff;">
+              @if(count($updateStatuses)  > 0) 
+              @if($status) 
+              <h1>
+                  <strong style="padding:10px">Package Delivery: <span style="color: green;">Delivered</span></strong>
+              </h1>              
+              </div>      
             <div class="progress">
               <div class="progress-bar bg-success" role="progressbar" style="width: 100%; background: green" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
@@ -44,11 +46,13 @@
             @endforeach
             </tbody>
             </table>
-            @else
-              <h4>No Updates Yet</h4>
-            @endif
+           
           </div>
-
+          @else
+          <div class="container" style="margin-top: 50px">
+            <h1 style="text-align: center; color:#ffffff">No Updates Yet</h1>
+          </div>
+          @endif
         </div>
 
       </div>
