@@ -18,7 +18,7 @@ Route::get('/about', 'PageController@about');
 //Route::get('/domestic', 'PageController@domestic');
 //Route::get('/ecommerce', 'PageController@ecommerce');
 Route::get('/contact', 'PageController@contact');
-Route::post('/track', 'PackageController@getPackage');
+Route::get('/track', 'PackageController@getPackage');
 
 // Routes for the Admin pages
     Route::middleware('auth')->group( function() {

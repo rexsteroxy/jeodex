@@ -28,6 +28,8 @@ class CreatePackagesTable extends Migration
             $table->string('description');
             $table->string('weight');
             $table->string('cost');
+            $table->string('admin');
+            $table->boolean('status')->default(false);
             $table->timestamps();
         });
     }

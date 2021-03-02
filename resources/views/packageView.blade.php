@@ -1,8 +1,8 @@
 @extends('layouts.mastercopy')
 
 @section('content')
-<header class="alternate">
-    <div class="header-main">
+<header class="alternate" style="background:black">
+    <div class="header-main"  style="background:black">
 
 
         <div class="container">
@@ -24,7 +24,7 @@
                     </div>
                     @endforeach
                     @else
-                    <h6>Not valid</h6>
+                    <h6>Package Does Not Exit</h6>
                     @endif
                 </div>
             </div>
@@ -38,6 +38,7 @@
         <!--div id="top"></div-->
         <!---->
         <div class="content" ui-view="">
+        <button class="btn btn-primary"><a href="/">Back</a></button>
             @if(count($packages) > 0)
 
             @foreach($packages->all() as $package)
@@ -58,6 +59,11 @@
                                 <!---->
                                 <div class="card-title alt" ng-if="orderCtrl.alternetStyle === " tracker"">Tracking:
                                     {{$package->tracking_id }}</div>
+
+                                    <div>
+                                    <button class="{{ $package->status ? 'btn btn-success' : 'btn btn-warning' }}">
+                                    {{ $package->status ? 'Delivered' : 'Pending' }}</button>
+                                    </div>
                                 <!---->
                                 <div class="details-container">
                                     <!---->

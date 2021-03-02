@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-//use Illuminate\Http\Request;
+use Illuminate\Http\Request;
 use App\Models\UpdateStatus;
 use App\Models\Package;
+use Illuminate\Support\Facades\Auth;
 
 class UpdateStatusController extends Controller
 {
@@ -33,7 +34,8 @@ class UpdateStatusController extends Controller
         'tracking_id' => request('tracking_id'),
         'current_location' => request('current_location'),
         'previous_location' => request('previous_location'),
-        'package_id' => $package->id
+        'package_id' => $package->id,
+        'admin'=> Auth::user()->email
        ]);
         $package_id = request('package_id');
        $package = Package::find($package_id);
@@ -41,6 +43,7 @@ class UpdateStatusController extends Controller
        $data = array(
         
         "current_location"=>request('current_location'),
+        "admin"=>Auth::user()->email,
        
         );
 
@@ -60,6 +63,17 @@ class UpdateStatusController extends Controller
         if ($package->current_location == $package->destination) {
             //set status to true
             $status = true;
+
+            $data = array(
+        
+                "status"=>$status,
+                
+               
+                );
+        
+                Package::where('id',$id)->update($data);
+                $package->update();
+
     }
         return view('packages.delivery_status', compact('updateStatuses', 'status'));
     }

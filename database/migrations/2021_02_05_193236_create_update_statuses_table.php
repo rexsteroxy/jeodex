@@ -19,6 +19,7 @@ class CreateUpdateStatusesTable extends Migration
             $table->string('tracking_id');
             $table->string('current_location');
             $table->string('previous_location');
+            $table->string('admin');
             $table->timestamps();
             
         });

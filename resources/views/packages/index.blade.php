@@ -37,6 +37,7 @@
                 <td>{{$package->sender_name}}</td>
                 <td>{{$package->receiver_name}}</td>
                 <td>{{$package->receiver_email}}</td>
+                <td><a href="{{ url("/view_status/{$package->id}") }}"><span class="{{ $package->status ? 'btn btn-success' : 'btn btn-warning' }}">{{ $package->status ? 'Delivered' : 'Pending' }}</span></a></td>
                 <td><a href="{{ url("/view/{$package->id}") }}"><span class="btn btn-primary">View</span></a></td>
                 <td><a href="{{ url("/delete/{$package->id}") }}"><span class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this Package Delivery?');">Delete</span></a></td>
               </tr>

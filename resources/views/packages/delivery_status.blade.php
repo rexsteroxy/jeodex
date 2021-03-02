@@ -1,6 +1,7 @@
 @extends('layouts.admin')
 
 @section('content')
+<div class="container">
 <div class="row">
       <div class="col-md-8 col-md-offset-2">
         <div class="panel" style="margin-top: 100px;">
@@ -11,7 +12,8 @@
               <h1>
                   <strong style="padding:10px">Package Delivery: <span style="color: green;">Delivered</span></strong>
               </h1>              
-              </div>      
+              </div>     
+               
             <div class="progress">
               <div class="progress-bar bg-success" role="progressbar" style="width: 100%; background: green" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
@@ -33,7 +35,7 @@
                   <th>Tracking ID</th>
                   <th>Current Location</th>
                   <th>Date</th>
-                  <th></th>
+                  <th><p>Package Was Last Update By</th>
                 </tr>
               </thead>
               <tbody>
@@ -43,6 +45,7 @@
                   <td>{{$updateStatus->tracking_id}}</td>
                   <td>{{$updateStatus->current_location}}</td>
                   <td>{{$updateStatus->updated_at->diffForHumans()}}</td>
+                  <td><span style="font-size: 20px">{{$updateStatus->admin}}</span></p></td>
                 </tr>
               
             @endforeach
@@ -53,6 +56,9 @@
           @else
           <div class="container" style="margin-top: 50px">
             <h1 style="text-align: center; color:#ffffff">No Updates Yet</h1>
+            <div class="row" style="margin-left: 50px">
+              <button class="btn btn-primary"><a href="{{ url("/status") }}" style="color:white">Back</a></button>
+          </div>
           </div>
           @endif
         </div>
@@ -63,8 +69,8 @@
 
     <div class="row" style="margin-left: 50px">
     <button class="btn btn-primary"><a href="{{ url("/status") }}" style="color:white">Back</a></button>
-    
     </div>
 
+    </div>
 
 @endsection

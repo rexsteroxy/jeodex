@@ -23,7 +23,7 @@
                   <th></th>
                 </tr>
               </thead>
-              <tbody>
+              <tbody> 
             @foreach($packages as $package)
 
                 <tr>
@@ -32,8 +32,9 @@
                   <td>{{$package->destination}}</td>
                   <td>{{$package->current_location}}</td>
             
-                  <td><a href="{{ url("/view_status/{$package->id}") }}"><span class="btn btn-warning">View Status</span></a></td>
-                  <td><a href="{{ url("/status_update/{$package->id}") }}"><span class="btn btn-danger">Update Status</span></a></td>
+                  <td><button class="{{ $package->status ? 'btn btn-success' : 'btn btn-warning' }}">{{ $package->status ? 'Delivered' : 'Pending' }}</button></td>
+                  <td><a href="{{ url("/view_status/{$package->id}") }}"><span class="btn btn-default">View Status</span></a></td>
+                  <td><a href="{{ url("/status_update/{$package->id}") }}"><span class="btn btn-primary">Update Status</span></a></td>
                 </tr>
 
             @endforeach
@@ -46,5 +47,6 @@
       </div>
      
     </div>
+   
   </div>
 @endsection

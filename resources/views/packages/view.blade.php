@@ -10,10 +10,15 @@
     @if(count($packages)  > 0)
         @foreach($packages->all() as $package)
         <div class="panel-heading" style="background: #262947; color:#ffffff;">
-          <h1>
+          <h2>
             <strong style="padding:10px">Tracking ID:  {{$package->tracking_id}}</strong>
+            @if($package->status == true)
+            <td><a href="{{ url("/view_status/{$package->id}") }}"><span class="{{ $package->status ? 'btn btn-success' : 'btn btn-warning' }}">{{ $package->status ? 'Delivered' : 'Pending' }}</span></a></td>
+            @else
           <a style="float: right;" href="{{ ("/edit/{$package->id}") }}"><span class="btn btn-warning">Edit Delivery</span></a>
-          </h1>  
+          @endif
+          </h2>  
+          <p>Package Was Last Update By: <span style="font-size: 20px">{{$package->admin}}</span></p>
         </div>
       <table class="table table-hover personal-task">
         <tbody>

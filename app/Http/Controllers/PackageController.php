@@ -74,6 +74,7 @@ class PackageController extends Controller
             // Calling the generate track id function
             $tracking_id = $track_code;
             $package->tracking_id = $tracking_id;
+            $package->admin = Auth::user()->email;
             $package->save();
 
             // Send email to admin user
