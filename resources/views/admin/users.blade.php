@@ -35,7 +35,7 @@
                   @else
                   <td>{{$user->created_at->diffForHumans()}}</td>
                   @endif
-                  <td><a href="/admin/delete/{{ $user->id }}"><span class="btn btn-danger">Delete</span></a></td>
+                  <td><a href="/admin/delete/{{ $user->id }}"><span class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this Admin?');">Delete</span></a></td>
                   <td><a href="/profile/{{ $user->id }}"><span class="btn btn-warning">Profile</span></a></td>
                 </tr>
                 @endforeach
