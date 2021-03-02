@@ -8,7 +8,7 @@
     <meta name="description" content="JohDex Delivery logistics for every business ">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,700,900|Display+Playfair:200,300,400,700"> 
-    <link rel="stylesheet" href="fonts/icomoon/style.css">
+    <link rel="stylesheet" href="admin_css/fonts/icomoon/style.css">
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/magnific-popup.css">
@@ -18,7 +18,7 @@
 
     <link rel="stylesheet" href="css/bootstrap-datepicker.css">
 
-    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="admin_css/fonts/flaticon/font/flaticon.css">
 
 
 
@@ -170,7 +170,7 @@
         <div class="row align-items-center">
           
           <div class="col-11 col-xl-2">
-            <img src="images/logo.png" alt="Logo" width="100" height="100">
+            <img src="images/johdexLogo.png" alt="Logo" width="100" height="100">
           </div>
           <div class="col-12 col-md-10 d-none d-xl-block">
             <nav class="site-navigation position-relative text-right" role="navigation">

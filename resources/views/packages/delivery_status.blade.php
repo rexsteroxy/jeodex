@@ -16,11 +16,9 @@
               <div class="progress-bar bg-success" role="progressbar" style="width: 100%; background: green" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
             @else
-            <h1>
-              <strong style="padding:10px">Package Delivery: <span style="color: yellow;">Pending...</span></strong>
-            </h1> 
+            <h2 style="color:red; text-align:center">: Pending</h2>
             <div class="progress">
-              <div class="progress-bar bg-success" role="progressbar" style="width: 100%; background: yellow" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+              <div class="progress-bar bg-success" role="progressbar" style="width: 100%; background: red" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
             @endif
           </div>
