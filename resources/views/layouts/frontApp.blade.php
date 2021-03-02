@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Jeodex Logistics</title>
+  <title>JohDex Logistics</title>
     <meta charset="utf-8">
+    <meta name="description" content="A delivery partner you can trust!.We care for your package as much as you do with tailored solutions that
+              ensure timely deliveries to everywhere in Nigeria.">
+  
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <meta name="description" content="JohDex Delivery logistics for every business ">

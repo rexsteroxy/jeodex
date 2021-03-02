@@ -9,9 +9,8 @@
           <div class="col-md-8" data-aos="fade-up" data-aos-delay="400">
             
 
-            <h1 class="text-white font-weight-light mb-5 text-uppercase ">A delivery partner you can trust!</h1>
-            <h6 class="text-white mb-5 px-5">We care for your package as much as you do with tailored solutions that
-              ensure timely deliveries to everywhere in Nigeria.</h6>
+            <h1 class="text-white font-weight-light mb-5 text-uppercase ">...Swift delivery always!</h1>
+            <h6 class="text-white mb-5 px-5">Effective Logistics Solutions For Every Business</h6>
             <form action="/track" method="post" >
               {{ csrf_field() }}
               @include('includes.messages')
