@@ -10,7 +10,7 @@
 
     <meta name="description" content="JohDex Delivery logistics for every business ">
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,700,900|Display+Playfair:200,300,400,700"> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic "> 
     <link rel="stylesheet" href="admin_css/fonts/icomoon/style.css">
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
